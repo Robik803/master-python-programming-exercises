@@ -15,3 +15,18 @@ class Student:
 ### DON'T modify the code above ###
         
 ### ↓ Your code here ↓ ###
+
+class CollegeStudent(Student):
+    def __init__(self, name, age, grade,major):
+        self.major = major
+        super().__init__(name, age, grade)
+    
+    def introduce(self):
+        return f"Hi there! I'm {self.name}, a college student majoring in {self.major}."
+    
+    def attend_lecture(self):
+        return f"{self.name} is attending a lecture for {self.major} students."
+    
+college_student = CollegeStudent("John", 16, 85, "Science")
+print(college_student.introduce())
+print(college_student.attend_lecture())
